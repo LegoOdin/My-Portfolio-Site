@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon.png">
     <link rel="stylesheet" type="text/css" href="./css/styles.css">
@@ -12,27 +10,22 @@
     <title>About Adam</title>
 </head>
 <body>
-    <header id="hero"> 
-        <div>
-            <img src="./img/logo.svg" alt="Adam Gapper">
+
+    <header> 
+        <div class="container">
+            <img src="./img/logo.svg" alt="Adam Gapper" class="logo">
             <nav>
                 <ul>
-                    <li><a href="index.html">Work</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="index.html" class="hero-link">Work</a></li>
+                    <li><a href="about.html" class="hero-link">About</a></li>
+                    <li><a href="#contact" class="hero-link">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main id="work">
-        <div> 
-            <div>
-                <h1>About</h1>
-            </div>
-        </div>
-
-        <div>
+        <div  class="container">
             <picture>
                 <source srcset="./img/self/selfImage1x.jpg" media="(max-width:767px)">
                 <img src="./img/self/selfImage2x.jpg" alt="My Image"> 
@@ -85,28 +78,28 @@
     </main>
 
     <footer id="contact">
-        <div>
+        <div class="container">
             <h2>Get in touch</h2>
             <p>Do you like my work and want to discuss opportunities? Please get in touch:</p>
             <a href="tel:+491234567">+49 1234567</a> or Skype me at <a href="skype:hello.careerfoundry">hello.careerfoundry</a>
 
-            <div>
+            <div class="row">
                 <p>Prefer sending an emal?</p>
-                <a href="mailto:office@careerfoundry.com">Email me</a>
+                <a href="mailto:office@careerfoundry.com" class="button contact">Email me</a>
             </div>
 
-            <div>
+            <div class="social">
                 <a href="LINKEDIN-URL" target="_blank">
-                    <img src="./img/social/linkedin.svg" alt="linkedin">
+                    <img src="./img/social/linkedin.svg" alt="linkedin" class="social-icon">
                 </a>
                 <a href="TWITTER-URL" target="_blank">
-                    <img src="./img/social/x.svg" alt="Twitter">
+                    <img src="./img/social/x.svg" alt="Twitter" class="social-icon">
                 </a>
                 <a href="ANOTHER-SOCIAL-LINK">
-                    <img src="./img/social/instagram.svg" alt="instagram">
+                    <img src="./img/social/instagram.svg" alt="instagram" class="social-icon">
                 </a>
                 <a href="https://www.behance.net/adamgapper">
-                    <img src="./img/social/behance.svg" alt="behance">
+                    <img src="./img/social/behance.svg" alt="behance" class="social-icon">
                 </a>
             </div>
             <p>Copyright 2024</p>
