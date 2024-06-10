@@ -1,3 +1,6 @@
+html {
+  font-size: 16px;
+}
 * {
   box-sizing: border-box;
 }
@@ -5,7 +8,6 @@
 body {
     background-color: #F5FAFE;
     font-family: 'Overpass', sans-serif;
-    font-size: 16px;
     font-weight: 400;
     line-height: 1.3;
     color: #000512;
@@ -59,34 +61,34 @@ h4 {
 
 /*anchor Styles */
 a {
-    color: #c9400e;
+    color: #000512;
     text-decoration: none;
   }
 
   a:visited { 
-    color: #cc6540;
+    color: #000512;
   }
 
   a:focus,
   a:hover {
-    color: #cf3700;
+    color: #FF4400;
     text-decoration: underline;
   }
 
   a:active {
-    color: #cf3700;
+    color: #000512;
   }
 
 
 /*Buttons Styles */ 
 .button {
   display: inline-block;
-  background-color: #cc6540;
+  background-color: #9A3814;
   color:#F5FAFE;
   font-weight: 500;
   padding: 10px;
   border-radius: 3px;
-  border-bottom: 2px solid #c9400e;
+  border-bottom: 2px solid #9A3814;
   transition: 0.2s opacity;
 
 }
@@ -110,9 +112,10 @@ a {
 
 .button.contact {
   background-color: transparent;
-  color: #cc6540;
+  color: #9A3814;
+  font-weight: 600;
   text-transform: uppercase;
-  border: 2px solid #cc6540;
+  border: 2px solid #9A3814;
   display: inline-block;
   width: 100%;
   text-align: center;
@@ -125,7 +128,7 @@ a {
 }
 
 .button.contact:hover {
-  background-color: #cc6540;
+  background-color: #9A3814;
   color: #F5FAFE;
 }
 
@@ -205,5 +208,113 @@ footer {
 .social {
   display: inline-block;
   width: 100%;
+}
+
+.berlin-illustration {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+@keyframes color-change {
+  from {fill: #edc655;}
+  to {fill: #f76414;}
+}
+
+@keyframes cloud-move {
+  from {transform: translate(0,50px);}
+  to {transform: translate(200px,50px);}
+}
+
+@keyframes cloud-move-reverse {
+  from {transform: translate(446px,48px);}
+  to {transform: translate(100px, 48px);}
+}
+
+.sun {
+  animation-duration: 4s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+.cloud-front {
+  animation-duration: 10s;
+  animation-name: cloud-move;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+.cloud-back {
+  animation-duration: 10s;
+  animation-name: cloud-move-reverse;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+
+/* ==============================
+Medium devices (640px and larger)
+================================= */
+@media only screen and (min-width: 640px) {
+  html {
+    font-size: 18px;
+  }
+  header {
+    text-align: unset;
+    padding: 20px 0 13px;
+  }
+  nav {
+    width: auto;
+    float: right;
+    margin-top: 4px;
+  }
+  main {
+    padding-top: 140px;
+  }
+  #hero {
+    text-align: center;
+  }
+  #hero span {
+    display: block;
+  }
+  .col-md-6 {
+    width: 50%;
+  }
+  [class*="col-"] {
+    float: left;
+    padding: 10px;
+  }
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+}
+
+
+/* ==============================
+Large devices (1024px or larger)
+================================= */
+@media only screen and (min-width: 1024px) {
+  html {
+    font-size: 20px;
+  }
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .col-md-5 {
+    width: 60%;
+  }
+  .col-md-7 {
+    width: 40%;
+  }
+
 }
 
