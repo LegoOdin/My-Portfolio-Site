@@ -1,5 +1,6 @@
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 * {
   box-sizing: border-box;
@@ -16,7 +17,7 @@ body {
 header {
   background-color: #6CB8FF;
   text-align: center;
-  padding: 10px 0;
+  padding: 10px 0 4px;
   border-bottom: 3px solid #0084ff;
   position: fixed;
   width: 100%;
@@ -60,10 +61,11 @@ h4 {
 }
 
 /*anchor Styles */
+
 a {
-    color: #000512;
-    text-decoration: none;
-  }
+  color: #000512;
+  text-decoration: none;
+}
 
   a:visited { 
     color: #000512;
@@ -71,25 +73,27 @@ a {
 
   a:focus,
   a:hover {
-    color: #FF4400;
-    text-decoration: underline;
+    color: #000512;
+    text-decoration: underline overline #FF4400;
   }
 
   a:active {
-    color: #000512;
+    color: #FF4400;
   }
 
 
 /*Buttons Styles */ 
 .button {
   display: inline-block;
-  background-color: #9A3814;
+  background-color: #000512;
   color:#F5FAFE;
   font-weight: 500;
   padding: 10px;
-  border-radius: 3px;
-  border-bottom: 2px solid #9A3814;
+  border-radius: 4px;
+  border-bottom: 2px solid #000512;
   transition: 0.2s opacity;
+  text-decoration: none;
+
 
 }
 
@@ -102,20 +106,23 @@ a {
   opacity: 0.8;
   color: #F5FAFE;
   text-decoration: none;
+  border-bottom: 4px solid #FF4400;
+
 }
 
 .button:active {
   opacity: 0.8;
+  color: #F5FAFE;
   text-decoration: none;
   background-color: #cf3700;
 }
 
 .button.contact {
   background-color: transparent;
-  color: #9A3814;
+  color: #000512;
   font-weight: 600;
   text-transform: uppercase;
-  border: 2px solid #9A3814;
+  border: 2px solid #000512;
   display: inline-block;
   width: 100%;
   text-align: center;
@@ -128,7 +135,8 @@ a {
 }
 
 .button.contact:hover {
-  background-color: #9A3814;
+  background-color: #FF4400;
+  border-color: #FF4400 ;
   color: #F5FAFE;
 }
 
@@ -159,29 +167,61 @@ a {
 }
 
 .logo {
-  max-width: 250px;
+  max-width: 150px;
 }
+/* Nav styling */
 
+/*
 nav {
   display: inline-block;
   width: 100%;
 }
-
+*/
 nav > ul {
   list-style-type: none;
   padding: 0;
-}
-
-nav > ul > li {
-  display: inline-block;
+  margin: 0;
 }
 
 nav > ul > li > a {
   padding: 0 15px;
   text-transform: uppercase;
   font-weight: 700;
-  color: #cf3700;
+  color: #000512;
 }
+
+.navtoggle li:not(:last-child) {
+  display: none;
+}
+.navtoggle, .navtoggle.responsive {
+  position: relative;
+}
+
+.navtoggle li .icon {
+  position: absolute;
+  right: 0;
+  top: 2px;
+  font-size: 20px;
+  padding-right: 0;
+}
+
+.navtoggle.responsive li  {
+  display: block;
+}
+
+.navtoggle.responsive nav {
+  padding: 24px 0 0;
+}
+.navtoggle.responsive li  {
+  display: block;
+  padding: 10px 0;
+  border-top: 1px solid #0005120e;
+}
+
+.navtoggle.responsive li:last-child  {
+  padding: 0 0 10px;
+}
+/* Hero styling */
 
 #hero {
   background-color: #6CB8FF;
@@ -192,7 +232,7 @@ nav > ul > li > a {
 }
 
 main {
-  padding-top: 200px;
+  padding-top: 48px;
 }
 
 footer {
@@ -256,6 +296,8 @@ footer {
 }
 
 
+
+
 /* ==============================
 Medium devices (640px and larger)
 ================================= */
@@ -273,7 +315,7 @@ Medium devices (640px and larger)
     margin-top: 4px;
   }
   main {
-    padding-top: 140px;
+    padding-top: 90px;
   }
   #hero {
     text-align: center;
@@ -293,7 +335,21 @@ Medium devices (640px and larger)
     clear: both;
     display: table;
   }
-
+  .logo {
+    max-width: 250px;
+  }
+  nav > ul {
+    margin: 1rem 0;
+  }
+  nav > ul > li {
+    display: inline-block;
+  }
+  .navtoggle li:not(:last-child) {
+    display: inline-block;
+  }
+  .navtoggle li:last-child {
+    display: none;
+  }
 }
 
 
@@ -315,6 +371,20 @@ Large devices (1024px or larger)
   .col-md-7 {
     width: 40%;
   }
-
+  .logo {
+    max-width: 250px;
+  }
+  nav > ul {
+    margin: 1rem 0;
+  }
+  nav > ul > li {
+    display: inline-block;
+  }
+  .navtoggle li:not(:last-child) {
+    display: inline-block;
+  }
+  .navtoggle li:last-child {
+    display: none;
+  }
 }
 
